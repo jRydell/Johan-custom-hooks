@@ -1,17 +1,12 @@
 import "./App.css";
-import { useCounter } from "./hooks/useCounter";
+import Counter from "./components/Counter/Counter";
 
 function App() {
-  const [x, incrementX] = useCounter();
-
   return (
-    <>
-      <div>
-        <h1>Hooks-Demo</h1>
-        <button onClick={incrementX}>Increment X</button>
-        <p>{x}</p>
-      </div>
-    </>
+    <div className="App">
+      <h1>Hooks-demo</h1>
+      <Counter initialValue={0} maxValue={5} minValue={-5} stepValue={3} />
+    </div>
   );
 }
 
