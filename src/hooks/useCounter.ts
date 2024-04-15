@@ -8,31 +8,31 @@ export const useCounter = (
 ) => {
   const [count, setCount] = useState(initialValue);
   const isEven = count % 2 === 0;
-  const increment = () => {
+  const increment = (): void => {
     if (count < maxValue) setCount(count + 1);
   };
 
-  const decrement = () => {
+  const decrement = (): void => {
     if (count > minValue) setCount(count - 1);
   };
 
-  const reset = () => {
+  const reset = (): void => {
     setCount(initialValue);
   };
 
-  const setToMin = () => {
+  const setToMin = (): void => {
     setCount(minValue);
   };
 
-  const setToMax = () => {
+  const setToMax = (): void => {
     setCount(maxValue);
   };
 
-  const incrementStep = () => {
+  const incrementStep = (): void => {
     if (count + stepValue <= maxValue) setCount(count + stepValue);
   };
 
-  const decrementStep = () => {
+  const decrementStep = (): void => {
     if (count - stepValue >= minValue) setCount(count - stepValue);
   };
 

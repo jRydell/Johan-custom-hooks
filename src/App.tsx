@@ -6,6 +6,8 @@ function App() {
     <div className="App">
       <h1>Hooks-demo</h1>
       <Counter initialValue={0} maxValue={5} minValue={-5} stepValue={3} />
+      <Counter initialValue={3} maxValue={10} minValue={-10} stepValue={6} />
+      <Counter initialValue={6} maxValue={15} minValue={-15} stepValue={9} />
     </div>
   );
 }
