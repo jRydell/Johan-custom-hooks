@@ -3,48 +3,38 @@ import { useState } from "react";
 export const useCounter = (
   initialValue: number,
   maxValue: number,
-  minValue: number,
-  stepValue: number
+  minValue: number
 ) => {
   const [count, setCount] = useState(initialValue);
   const isEven = count % 2 === 0;
-  const increment = (): void => {
-    if (count < maxValue) setCount(count + 1);
+
+  const increment = (num: number) => {
+    if (count + num <= maxValue) setCount(count + num);
   };
 
-  const decrement = (): void => {
-    if (count > minValue) setCount(count - 1);
+  const decrement = (num: number) => {
+    if (count - num >= minValue) setCount(count - num);
   };
 
-  const reset = (): void => {
+  const reset = () => {
     setCount(initialValue);
   };
 
-  const setToMin = (): void => {
+  const setToMin = () => {
     setCount(minValue);
   };
 
-  const setToMax = (): void => {
+  const setToMax = () => {
     setCount(maxValue);
-  };
-
-  const incrementStep = (): void => {
-    if (count + stepValue <= maxValue) setCount(count + stepValue);
-  };
-
-  const decrementStep = (): void => {
-    if (count - stepValue >= minValue) setCount(count - stepValue);
   };
 
   return {
     count,
-    increment,
-    decrement,
     reset,
     setToMin,
     setToMax,
     isEven,
-    incrementStep,
-    decrementStep,
+    increment,
+    decrement,
   };
 };
