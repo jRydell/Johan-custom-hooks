@@ -1,3 +1,28 @@
 .Counter {
   color: red;
+  display: flex;
+  gap: 0.5rem;
+  border: 3px solid grey;
+  margin-bottom: 0.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  min-width: 600px;
+
+  button {
+    border-radius: 0.5rem;
+    width: 6rem;
+    transition: 200ms;
+    min-height: 2rem;
+
+    &:hover {
+      background-color: rgb(66, 77, 229);
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
+    align-items: center;
+    min-width: auto;
+  }
 }
