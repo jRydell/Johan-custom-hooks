@@ -1,5 +1,3 @@
-// Counter.js
-
 import "./Counter.css";
 import { useCounter } from "../../hooks/useCounter";
 
