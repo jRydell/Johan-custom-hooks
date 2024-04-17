@@ -8,12 +8,12 @@ export const useCounter = (
   const [count, setCount] = useState(initialValue);
   const isEven = count % 2 === 0;
 
-  const increment = (num: number) => {
-    if (count + num <= maxValue) setCount(count + num);
+  const increment = (value: number) => {
+    if (count + value <= maxValue) setCount(count + value);
   };
 
-  const decrement = (num: number) => {
-    if (count - num >= minValue) setCount(count - num);
+  const decrement = (value: number) => {
+    if (count - value >= minValue) setCount(count - value);
   };
 
   const reset = () => {
