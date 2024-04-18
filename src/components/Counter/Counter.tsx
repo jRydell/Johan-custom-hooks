@@ -1,5 +1,3 @@
-// Counter.js
-
 import "./Counter.css";
 import { useCounter } from "../../hooks/useCounter";
 
@@ -34,7 +32,10 @@ const Counter = ({
       <button onClick={reset}>Reset</button>
 
       <p>Count: {count}</p>
-      <p>The number {isEven ? "is even" : "odd"}</p>
+      <p>{isEven ? "even" : "odd"}</p>
+      <p>Max: {maxValue}</p>
+      <p>Min: {minValue}</p>
+      <p>Initial: {initialValue}</p>
     </div>
   );
 };
