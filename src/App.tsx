@@ -1,6 +1,7 @@
 import "./App.css";
 import Counter from "./components/Counter/Counter";
 import DataDisplayComponent from "./components/DataDisplayComponent/DataDisplayComponent";
+import ToggleButton from "./components/ToggleButton/ToggleButton";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         minValue={-5}
         stepValue={3}
       />
+      <ToggleButton />
       <h2>useFetch</h2>
       <DataDisplayComponent url={"https://swapi.py4e.com/api/people/4/"} />
       <DataDisplayComponent url={"https://swapi.py4e.com/api/people/3/"} />
