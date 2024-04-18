@@ -1,10 +1,10 @@
-import { UseToggle } from "../../hooks/UseToggle";
 import { FaToggleOff } from "react-icons/fa";
 import { FaToggleOn } from "react-icons/fa";
-import './DarkModeToggle.css'
+import "./DarkModeToggle.css";
+import { useToggle } from "../../hooks/UseToggle";
 
 const DarkModeToggle = () => {
-  const { toggle, toggleState } = UseToggle();
+  const { toggle, toggleState } = useToggle();
   const body = document.querySelector("body");
   toggle ? body?.classList.add("darkMode") : body?.classList.remove("darkMode");
   return (
