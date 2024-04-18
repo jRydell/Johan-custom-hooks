@@ -1,12 +1,16 @@
 import "./App.css";
 import Counter from "./components/Counter/Counter";
+import DarkModeToggle from "./components/DarkmodeToggle/DarkModeToggle";
 import DataDisplayComponent from "./components/DataDisplayComponent/DataDisplayComponent";
-import ToggleButton from "./components/ToggleButton/ToggleButton";
 
 function App() {
   return (
     <div className="App">
       <h1>Hooks-demo</h1>
+      <section className="darkmode-wrap">
+        <h2>Dark Mode</h2>
+        <DarkModeToggle />
+      </section>
       <h2>useCounter</h2>
       <Counter
         initialValue={0}
@@ -15,7 +19,7 @@ function App() {
         minValue={-5}
         stepValue={3}
       />
-      <ToggleButton />
+
       <h2>useFetch</h2>
       <DataDisplayComponent url={"https://swapi.py4e.com/api/people/4/"} />
       <DataDisplayComponent url={"https://swapi.py4e.com/api/people/3/"} />
