@@ -8,8 +8,7 @@ function App() {
     <div className="App">
       <h1>Hooks-demo</h1>
       <section className="darkmode-wrap">
-        <DarkModeToggle />
-        <h2>Dark Mode</h2>
+        <DarkModeToggle title={"Darkmode"} />
       </section>
       <h2>useCounter</h2>
       <Counter
@@ -17,6 +16,13 @@ function App() {
         countValue={1}
         maxValue={5}
         minValue={-5}
+        stepValue={2}
+      />
+      <Counter
+        initialValue={3}
+        countValue={1}
+        maxValue={10}
+        minValue={-10}
         stepValue={3}
       />
 
