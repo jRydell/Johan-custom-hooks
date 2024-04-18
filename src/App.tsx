@@ -1,14 +1,15 @@
 import "./App.css";
 import Counter from "./components/Counter/Counter";
-import DarkModeToggle from "./components/DarkmodeToggle/DarkModeToggle";
+
 import DataDisplayComponent from "./components/DataDisplayComponent/DataDisplayComponent";
+import ModeToggle from "./components/ModeToggle/ModeToggle";
 
 function App() {
   return (
     <div className="App">
       <h1>Hooks-demo</h1>
-      <section className="darkmode-wrap">
-        <DarkModeToggle title={"Darkmode"} />
+      <section className="ModeToggle">
+        <ModeToggle title={"Darkmode"} />
       </section>
       <h2>useCounter</h2>
       <Counter
