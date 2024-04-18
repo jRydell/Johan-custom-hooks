@@ -1,9 +1,15 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-function useFetch(url: string) {
-  const [data, setData] = useState(null); // state for data
-  const [loading, setLoading] = useState(true); // state for loading
-  const [error, setError] = useState(null); // state for error
+type ApiResponse<T> = {
+  data: T | null;
+  loading: boolean;
+  error: string | null;
+};
+
+export const useFetch = <T>(url: string): ApiResponse<T> => {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -11,11 +17,12 @@ function useFetch(url: string) {
       setError(null);
 
       try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(`An error occurred: ${response.statusText}`);
+        const resp = await fetch(url);
+        if (!resp.ok) {
+          throw new Error(`An error occurred: ${resp.statusText}`);
         }
-        const jsonData = await response.json();
+
+        const jsonData: T = await resp.json();
         setData(jsonData);
       } catch (error: any) {
         setError(error.message);
@@ -23,11 +30,8 @@ function useFetch(url: string) {
         setLoading(false);
       }
     };
-
     fetchData();
-  }, [url]); // dependency array with url
+  }, [url]);
 
   return { data, loading, error };
-}
-
-export default useFetch;
+};

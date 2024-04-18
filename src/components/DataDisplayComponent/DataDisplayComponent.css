@@ -1,0 +1,14 @@
+.DataDisplayComponent {
+  color: rgb(246, 243, 243);
+  display: flex;
+  gap: 0.5rem;
+  border: 3px solid grey;
+  margin-bottom: 0.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  min-width: 600px;
+  transition: 500ms;
+  background-color: rgb(23, 82, 102);
+  justify-content: center;
+  align-items: center;
+}
