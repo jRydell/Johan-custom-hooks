@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <h1>Hooks-demo</h1>
       <section className="darkmode-wrap">
-        <h2>Dark Mode</h2>
         <DarkModeToggle />
+        <h2>Dark Mode</h2>
       </section>
       <h2>useCounter</h2>
       <Counter
