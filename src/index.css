@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(43, 43, 43, 0.87);
+  background-color: #d3d2d2;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,4 +19,14 @@ body {
   place-items: center;
   min-width: 600px;
   min-height: 100vh;
+  transition: all 500ms;
+}
+
+.darkMode {
+  background-color: rgb(54, 52, 52);
+
+  color: whitesmoke;
+  .dark-mode-icon {
+      color: whitesmoke;       
+  }
 }

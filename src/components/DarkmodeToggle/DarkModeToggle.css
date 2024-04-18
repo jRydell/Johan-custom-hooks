@@ -1,0 +1,17 @@
+.darkmode-wrap {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    button {
+        background: none;
+        color: rgb(54, 52, 52);
+        padding: .3em .5em;
+        height: max-content;
+        border-radius: .5rem;        
+        border: none;
+        .dark-mode-icon {
+            font-size: 2rem;
+        }        
+    }
+}
